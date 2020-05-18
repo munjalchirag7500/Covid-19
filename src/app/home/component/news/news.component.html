@@ -1,0 +1,14 @@
+<div class="container" *ngIf="resData">
+  <div class="row">
+    <div *ngFor="let n of resData;let i = index" class="col-lg-10 offset-lg-1 col-sm-12" >
+      <ion-card class="m-lg-5">
+        <img [(src)]="n.urlToImage" alt="">
+        <ion-card-header style="font-weight: bold; color: #000;">{{n.title | uppercase }}</ion-card-header>
+        <ion-card-content>
+          {{n.content}}
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</div>
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LivetrackerService } from 'src/app/service/livetracker.service';
 
 @Component({
   selector: 'app-tracker',
@@ -6,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tracker.component.scss'],
 })
 export class TrackerComponent implements OnInit {
+caseStudies;
+  constructor(private tser:LivetrackerService) { }
 
-  constructor() { }
+  ngOnInit() {
 
-  ngOnInit() {}
+    this.tser.fetchlive().subscribe(res=>{
+      this.caseStudies=res['cases_time_series'];
+      this.caseStudies=this.caseStudies[this.caseStudies.length-1];
+      
+    })
+  }
 
 }

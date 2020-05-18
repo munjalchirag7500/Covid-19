@@ -1,30 +1,25 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12 col-sm-12">
-      <ion-card >
+      <ion-card class="m-lg-5" *ngIf="caseStudies">
         <ion-card-header>
           <ion-card-title><img src="https://img.icons8.com/color/48/000000/india.png"/> India</ion-card-title>
         </ion-card-header>
-        <div class="tracker d-flex flex-row justify-content-between">
-          <div class="pl-1 d-flex flex-column ">
-            <p style="color: red;">76,450</p>
+        <div class="p-lg-5 tracker d-flex flex-row justify-content-between">
+          <div style="color: crimson;" class="pl-1 d-flex flex-column ">
+            <p >{{caseStudies.totalconfirmed}}</p>
             <p >Confirmed</p>
-            <p style="color:brown;">+56</p>
+            <p >+{{caseStudies.dailyconfirmed}}</p>
           </div>
-          <div class=" d-flex flex-column ">
-            <p style="color: green;">76,450</p>
-            <p >Active</p>
-            <p style="color:brown;">+56</p>
-          </div>
-          <div class=" d-flex flex-column ">
-            <p >76450</p>
+          <div style="color: chartreuse;" class=" d-flex flex-column ">
+            <p >{{caseStudies.totalrecovered}}</p>
             <p>Recovered</p>
-            <p>+56</p>
+            <p>+{{caseStudies.dailyrecovered}}</p>
           </div>
           <div class="pr-1 d-flex flex-column ">
-            <p >76450</p>
+            <p >{{caseStudies.totaldeceased}}</p>
             <p>Decreased</p>
-            <p>+56</p>
+            <p>+{{caseStudies.dailydeceased}}</p>
           </div>
         </div>
       </ion-card>

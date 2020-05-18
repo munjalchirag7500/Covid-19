@@ -6,11 +6,21 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { NgpSortModule } from "ngp-sort-pipe";
+import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+  ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule,
+    HttpClientModule,
+    NgpSortModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,NgxTwitterTimelineModule,
+    BrowserAnimationsModule],
   providers: [
     StatusBar,
     SplashScreen,
@@ -18,4 +28,4 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

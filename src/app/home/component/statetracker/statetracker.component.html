@@ -1,5 +1,22 @@
-<div class="container ">
-  <div class="row">
-   
-  </div>
+<div *ngIf="stateData" class="table ">
+  <table class="table ">
+    <thead>
+      <tr>
+        <th>State</th>
+        <th>Confirmed</th>
+        <th>Active</th>
+        <th>Recovered</th>
+        <th>Decreased</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let s of resdata | sortBy: 'asc':'state'; let i = index">
+      
+        <td>{{s.state | slice:0:18 }}</td>
+        <td>{{s.confirmed}}</td>
+        <td>{{s.active}}</td>
+        <td>{{s.recovered}}</td>
+        <td>{{s.deaths}}</td> 
+    </tbody>
+  </table>
 </div>
+
