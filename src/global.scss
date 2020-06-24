@@ -26,6 +26,7 @@
 @import "~@ionic/angular/css/flex-utils.css";
 .body{
     padding: 0;
+    
 }
 .container{
     padding:0;
@@ -33,3 +34,15 @@
 .ion-page{
     display:block !important;
 }
+ @media (max-width:577px){
+    .body{
+        font-size: 12px;
+        font-family: 'Karla', sans-serif;
+        font-weight: bold;
+        color:gray;
+        width: unset !important;
+
+        text-align: center;
+    }
+ 
+ }

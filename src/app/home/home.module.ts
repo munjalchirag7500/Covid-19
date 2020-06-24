@@ -9,10 +9,9 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { TrackerComponent } from './component/tracker/tracker.component';
 import { StatetrackerComponent } from './component/statetracker/statetracker.component';
 import { NewsComponent } from './component/news/news.component';
-
 import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 import { TweetsComponent } from './component/tweets/tweets.component';
-
+import { NgApexchartsModule } from "ng-apexcharts";
 @NgModule({
   imports: [
     CommonModule,
@@ -20,7 +19,7 @@ import { TweetsComponent } from './component/tweets/tweets.component';
     IonicModule,
     HomePageRoutingModule,
     NgpSortModule,
-    NgxTwitterTimelineModule
+    NgxTwitterTimelineModule,NgApexchartsModule
     
   ],
   declarations: [

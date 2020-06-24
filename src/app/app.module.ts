@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { NgpSortModule } from "ngp-sort-pipe";
 import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
+import { NgApexchartsModule } from "ng-apexcharts";
 @NgModule({
   declarations: [
     AppComponent
@@ -19,7 +20,7 @@ import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
     HttpClientModule,
     NgpSortModule,
     IonicModule.forRoot(),
-    AppRoutingModule,NgxTwitterTimelineModule,
+    AppRoutingModule,NgxTwitterTimelineModule,NgApexchartsModule,
     BrowserAnimationsModule],
   providers: [
     StatusBar,

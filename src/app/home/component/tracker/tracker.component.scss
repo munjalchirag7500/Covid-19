@@ -5,3 +5,14 @@
     color:gray;
     text-align: center;
 }
+
+@media (max-width:425px){
+    .tracker{
+        font-size: 12px;
+        font-family: 'Karla', sans-serif;
+        font-weight: bold;
+        color:gray;
+        text-align: center;
+    }
+
+}
