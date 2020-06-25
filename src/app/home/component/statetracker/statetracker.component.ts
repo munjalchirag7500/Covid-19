@@ -21,6 +21,8 @@ export class StatetrackerComponent implements OnInit {
     this.cser.fetchlive().subscribe(res=>{
       this.stateData=res['statewise'];
       this.resdata=this.stateData;
+
+      //dasdas
       this.resdata.shift();
     })
   }
