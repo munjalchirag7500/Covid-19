@@ -117,7 +117,7 @@ export class TrackerComponent implements OnInit {
       },
       xaxis: {
         labels: {
-          trim: false
+          trim: true
         },
         categories: date
       },

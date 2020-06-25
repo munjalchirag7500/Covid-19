@@ -12,6 +12,7 @@ import { NewsComponent } from './component/news/news.component';
 import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 import { TweetsComponent } from './component/tweets/tweets.component';
 import { NgApexchartsModule } from "ng-apexcharts";
+import { DistrictComponent } from './component/district/district.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -26,7 +27,7 @@ import { NgApexchartsModule } from "ng-apexcharts";
     HomePage,
     NavbarComponent,
     TrackerComponent,
-    StatetrackerComponent,NewsComponent,TweetsComponent
+    StatetrackerComponent,NewsComponent,TweetsComponent,DistrictComponent
   ]
 })
 export class HomePageModule {}

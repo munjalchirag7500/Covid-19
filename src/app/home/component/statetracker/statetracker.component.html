@@ -1,4 +1,4 @@
-<div *ngIf="stateData" class="container">
+<div *ngIf="resdata" class="container">
   <div class="row">
     <div class="col-sm-12">
       <div class="row heading">
@@ -7,13 +7,15 @@
       <div class="col-sm-3 card">Recovered</div>
       <div class="col-sm-3 card">Deceased</div>
       </div>
-      <div *ngFor="let d of resdata" class="container col-sm-12 mt-4 card">
-        <div class="mt-4 row heading">
-        <div class="col-sm-3 "> {{d.state}}</div>
+      <div *ngFor="let d of resdata " class="container col-sm-12 mt-4 card" (click)="showDistrict(d.statecode)">
+        <div class="mt-4 row heading" >
+        <div class="col-sm-3 "> {{d.state | slice:0:20}}</div>
         <div class="col-sm-3 "> {{d.confirmed}}<p class="middletext"  style="color: brown;">+{{d.deltaconfirmed}}</p></div>
         <div class="col-sm-3 ">{{d.recovered}} <p class="middletext"  style="color: green;">+{{d.deltarecovered}}</p> </div>
         <div class="col-sm-3 ">{{d.deaths}}</div>
-        </div>
+      </div>
+        <app-district *ngIf="showd && d.statecode==StateCode " [StateCode]="d.state"></app-district>
+        
     </div>
   </div>
 </div>

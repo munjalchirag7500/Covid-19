@@ -12,6 +12,8 @@ export class StatetrackerComponent implements OnInit {
   stateData;
   districtData;
   resdata:[];
+  showd=false;
+  StateCode=null;
   constructor(public cser:LivetrackerService) { }
 
   ngOnInit() {
@@ -21,17 +23,17 @@ export class StatetrackerComponent implements OnInit {
       this.resdata=this.stateData;
       this.resdata.shift();
       console.log(this.resdata)
-
-      
     })
-
-
-
-    
-
   }
-
-  
-
+  showDistrict(value){
+    this.showd=!this.showd;
+    if(this.showd){
+      this.StateCode=value;
+    }
+    else{
+      this.StateCode=null;
+    }
+    
+  }
 }
 

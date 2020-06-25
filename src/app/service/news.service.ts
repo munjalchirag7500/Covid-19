@@ -9,6 +9,7 @@ export class NewsService {
   constructor(public http :HttpClient) { }
 
   fetchToday(){
-    return this.http.get('http://newsapi.org/v2/top-headlines?country=in&apiKey=508ffe06166945cf81ced455524e74c7')
+    
+    return this.http.get('https://newsapi.org/v2/everything?q=covid&apiKey=508ffe06166945cf81ced455524e74c7')
   }
 }
