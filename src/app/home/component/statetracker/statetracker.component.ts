@@ -22,7 +22,6 @@ export class StatetrackerComponent implements OnInit {
       this.stateData=res['statewise'];
       this.resdata=this.stateData;
       this.resdata.shift();
-      console.log(this.resdata)
     })
   }
   showDistrict(value){

@@ -27,7 +27,7 @@ export class DistrictComponent implements OnInit {
       next:(res=>{
         var arr : [];
         this.districtDat=res[this.StateCode]["districtData"];
-        console.log(this.districtDat);
+        
       })
     })
 

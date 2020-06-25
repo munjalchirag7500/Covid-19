@@ -48,8 +48,6 @@ export class TrackerComponent implements OnInit {
   }
 
   initChart(){
-
-    console.log(this.totalConfirmed);
     let date = [];
     let cnfrmCases =[];
     let dailyrecovered =[];

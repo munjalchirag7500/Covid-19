@@ -1,3 +1,4 @@
+  <div class="container">
   <div class="row">
     <div class="col-sm-10">
       <div class="row heading">
@@ -6,7 +7,7 @@
       <div class="col-sm-3 card">Recovered</div>
       <div class="col-sm-3 card">Deceased</div>
       </div>
-      <div *ngFor="let d of districtDat | keyvalue"  class="col-sm-12 mt-4" >
+      <div *ngFor="let d of districtDat | keyvalue"  class="col-sm-12 mt-4 ml-auto " >
         <div class="mt-4 row heading" >
         <div class="col-sm-3">{{d.key}}</div>
         <div class="col-sm-3 ">{{d.value.confirmed}} <p class="middletext"  style="color: brown;">+{{d.value.delta.confirmed}}</p> </div>
@@ -15,4 +16,4 @@
       </div>
     </div>
   </div>
-
+</div>
