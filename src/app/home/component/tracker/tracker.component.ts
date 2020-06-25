@@ -53,7 +53,7 @@ export class TrackerComponent implements OnInit {
     let dailyrecovered =[];
     let dailydecreased =[];
     this.totalConfirmed.forEach(trackData=>{
-      date.push(trackData['date']);
+      date.push(trackData['date'])
       cnfrmCases.push(trackData['dailyconfirmed']);
       dailyrecovered.push(trackData['dailyrecovered']);
       dailydecreased.push(trackData['dailydeceased']);
